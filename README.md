@@ -1,2 +1,2 @@
 # spam
-This Script will help you to spam anything to anywhere you like!
+Spam text messages in any messaging platform while being completely undectable defeating many User Behavior Analytics (UBA) systems
