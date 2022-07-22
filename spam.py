@@ -120,11 +120,14 @@ if __name__ == "__main__":
 
         return {'count': count, 'text': text}
 
-    values = getValues()
-
-    obj = Spammer()
-    obj.count = values['count']
-    obj.text = values['text']
-    obj.spam()
-
-    sys.exit("Good Bye!")
+    try:
+        values = getValues()
+        obj = Spammer()
+        obj.count = values['count']
+        obj.text = values['text']
+        obj.spam()
+    except Exception as e:
+        print(f'Error: {e}')
+    finally:
+        print("Good Bye!")
+        input("")
