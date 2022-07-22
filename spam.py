@@ -98,3 +98,33 @@ class Spammer:
             self.typeSentence(text=self.text)
             self.pressEnter()
             print(f'[{count}] Sent Message!')
+
+
+if __name__ == "__main__":
+    def getValues():
+        args = sys.argv
+        try:
+            count = int(args[1])
+        except:
+            while True:
+                try:
+                    count = int(input("count> "))
+                    break
+                except Exception as e:
+                    print(f'Error: {e}')
+
+        try:
+            text = ' '.join(args[2:])
+        except:
+            text = input("text> ")
+
+        return {'count': count, 'text': text}
+
+    values = getValues()
+
+    obj = Spammer()
+    obj.count = values['count']
+    obj.text = values['text']
+    obj.spam()
+
+    sys.exit("Good Bye!")
